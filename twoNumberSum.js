@@ -28,15 +28,15 @@ function twoNumberSum2(array, targetSum) {
   return [];
 }
 
+// O(nlog(n)) | O(1) space
 function twoNumberSum3(array, targetSum) {
   array.sort((a, b) => a - b);
 
-  let left = 0;
-  let right = array.length - 1;
+  const left = 0;
+  const right = array.length - 1;
 
-  while (left < right) {
-    const currentSum = array[left] + array[right];
-
+  while (array[left] < array[right]) {
+    let currentSum = array[left] + array[right];
     if (currentSum === targetSum) {
       return [array[left], array[right]];
     } else if (currentSum < targetSum) {
