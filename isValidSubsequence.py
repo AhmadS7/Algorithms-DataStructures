@@ -1,5 +1,5 @@
 # O(n) time \ O(1) space
-# def validateSubsequence(array, subsequence):
+# def isValidateSubsequence(array, subsequence):
 #   arrIdx = 0
 #   seqIdx = 0
 
@@ -12,8 +12,8 @@
 
 
 
-
-def validateSubsequence(array, sequence):
+# O(n) time \ O(1) space
+def isValidateSubsequence(array, sequence):
   indexOfSequence = 0
 
   for value in array:
@@ -25,4 +25,4 @@ def validateSubsequence(array, sequence):
 
 
 
-print(validateSubsequence([5,1,22,25,6,-1,8,10,11,17], [1,6,-1,10]))
+print(isValidateSubsequence([5,1,22,25,6,-1,8,10,11,17], [1,6,-1,10]))
