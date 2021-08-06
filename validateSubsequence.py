@@ -1,13 +1,27 @@
 # O(n) time \ O(1) space
-def validateSubsequence(array,sequence):
-  arrIdx = 0
-  seqIdx = 0
-  while arrIdx < len(array) and seqIdx < len(sequence):
-    if array[arrIdx] == sequence[seqIdx]:
-        seqIdx += 1
-    arrIdx += 1
-  return seqIdx == len(sequence)         
+# def validateSubsequence(array, subsequence):
+#   arrIdx = 0
+#   seqIdx = 0
 
+#   while arrIdx < len(array) and seqIdx < len(subsequence):
+#     if array[arrIdx] == subsequence[seqIdx]:
+#       seqIdx += 1
+#     arrIdx += 1
+
+#   return seqIdx == len(subsequence)    
+
+
+
+
+def validateSubsequence(array, sequence):
+  indexOfSequence = 0
+
+  for value in array:
+    if indexOfSequence == len(sequence):
+      break
+    if sequence[indexOfSequence] == value:
+      indexOfSequence += 1
+  return indexOfSequence == len(sequence)   
 
 
 
