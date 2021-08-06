@@ -1,12 +1,24 @@
 // O(n) time \ O(1) space
+// function isValidateSubsequence(array, sequence) {
+//   let arrIndex = 0;
+//   let sequenceIndex = 0;
+
+//   while (arrIndex < array.length && sequenceIndex < sequence.length) {
+//     if (array[arrIndex] === sequence[sequenceIndex]) sequenceIndex++;
+//     arrIndex++;
+//   }
+//   return sequenceIndex === sequence.length;
+// }
+
+// O(n) time \ O(1) space
 function isValidateSubsequence(array, sequence) {
-  let arrIndex = 0;
   let sequenceIndex = 0;
 
-  while (arrIndex < array.length && sequenceIndex < sequence.length) {
-    if (array[arrIndex] === sequence[sequenceIndex]) sequenceIndex++;
-    arrIndex++;
+  for (const value of array) {
+    if (sequenceIndex == sequence.length) break;
+    if (sequence[sequenceIndex] === value) sequenceIndex++;
   }
+
   return sequenceIndex === sequence.length;
 }
 
