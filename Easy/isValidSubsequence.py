@@ -17,8 +17,8 @@ def isValidateSubsequence(array, sequence):
   indexOfSequence = 0
 
   for value in array:
-    if indexOfSequence == len(sequence):
-      break
+     if indexOfSequence == len(sequence):   
+      break 
     if sequence[indexOfSequence] == value:
       indexOfSequence += 1
   return indexOfSequence == len(sequence)   
