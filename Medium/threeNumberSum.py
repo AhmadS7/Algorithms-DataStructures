@@ -1,4 +1,4 @@
-currentSum = [12,3,1,2,-6,5,-8,6]
+num = [12,3,1,2,-6,5,-8,6]
 
 # O(n^2) Time / O(n) Space  
 def threeNumberSum(array, targetSum):
